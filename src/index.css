@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Playfair+Display:wght@400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background-color: #2c233d;
+  @apply text-white;
+  @apply font-poppins;
+  font-weight: 200;
+}
+html {
+  overflow-x: hidden;
+}
+
+/* ---------------------------------------------BG IN MAIN SECTIONS */
+.bg-pattern-landing {
+  background-image: url(assets/pattern-landing.svg);
+}
+.bg-pattern-skills {
+  background-image: url(assets/pattern-skills.svg);
+}
+.bg-pattern-projects {
+  background-image: url(assets/pattern-projects.svg);
+}
+
+/* ---------------------------------------------BACGROUND-1*/
+@property --primary-1 {
+  syntax: "<color>";
+  initial-value: hsl(164, 49%, 46%);
+  inherits: false;
+}
+@property --primary-12 {
+  syntax: "<color>";
+  initial-value: hsl(184, 49%, 46%);
+  inherits: false;
+}
+.bg-1 {
+  background: linear-gradient(70deg, var(--primary-1), var(--primary-12));
+  transition: --primary-1 700ms, --primary-12 700ms;
+}
+.bg-1:hover {
+  --primary-1: hsl(144, 49%, 46%);
+  --primary-12: hsl(164, 49%, 46%);
+}
+/* ---------------------------------------------BACGROUND-2*/
+@property --primary-2 {
+  syntax: "<color>";
+  initial-value: hsl(27, 90%, 51%);
+  inherits: false;
+}
+@property --primary-22 {
+  syntax: "<color>";
+  initial-value: hsl(47, 90%, 51%);
+  inherits: false;
+}
+.bg-2 {
+  background: linear-gradient(70deg, var(--primary-2), var(--primary-22));
+  transition: --primary-2 700ms, --primary-22 1500ms;
+}
+.bg-2:hover {
+  --primary-2: hsl(347, 90%, 51%);
+  --primary-22: hsl(297, 90%, 51%);
+}
+/* ---------------------------------------------CONTACT ME TEXT ASYNC*/
+.animate-text {
+  animation-name: text-animation;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes text-animation {
+  0% {
+    color: #3caea300;
+  }
+  50% {
+    color: #3caea3ff;
+  }
+  100% {
+    color: #3caea300;
+  }
+}
+
+/* ---------------------------------------------AIRPLANE */
+.airplane {
+  left: calc(40vw + 100px);
+  height: 150px;
+  width: 75px;
+  position: absolute;
+  animation-duration: 10000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.airplane-1 {
+  left: calc(50vw + 100px);
+  animation-delay: -1876ms;
+  animation-duration: 8300ms;
+  scale: 0.9;
+}
+.airplane-2 {
+  scale: 0.8;
+  left: calc(20vw + 100px);
+  animation-delay: -3873ms;
+  animation-duration: 5300ms;
+}
+.airplane-3 {
+  scale: 1.1;
+  left: calc(80vw + 100px);
+  animation-delay: -3873ms;
+  animation-duration: 10900ms;
+}
+.airplane-4 {
+  scale: 1.1;
+  left: calc(-10vw + 100px);
+  animation-delay: -6873ms;
+  animation-duration: 11500ms;
+}
+#airplaneRadius {
+  transform: rotate(-270deg);
+  transform-origin: bottom;
+
+  animation-name: airplane-animation;
+}
+
+#airplanePic {
+  width: 75px;
+  height: 75px;
+}
+
+@keyframes airplane-animation {
+  0% {
+    transform: translate(0, 0) rotate(-270deg) scaleX(1);
+  }
+  25% {
+    transform: translate(0, 0) rotate(-90deg) scaleX(1);
+  }
+  25.01% {
+    transform: translate(0, 0) rotate(-90deg) scaleX(1);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(90deg) scaleX(1);
+  }
+  50.01% {
+    transform: translate(225px, 0) rotate(270deg) scaleX(-1);
+  }
+
+  75% {
+    transform: translate(225px, 0) rotate(90deg) scaleX(-1);
+  }
+  75.01% {
+    transform: translate(225px, 0) rotate(90deg) scaleX(-1);
+  }
+
+  100% {
+    transform: translate(225px, 0) rotate(-90deg) scaleX(-1);
+  }
+}
