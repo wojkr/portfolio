@@ -34,8 +34,10 @@ module.exports = {
           "linear-gradient(70deg, hsl(164,49%,46%),hsl(184,49%,46%))",
       }),
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        poppins: ["Poppins", "sans-serif"],
+        title: ["Orbitron", "sans-serif"],
+        main: ["Jost", "sans-serif"],
+        // title: ["Playfair Display", "serif"],
+        // poppins: ["Poppins", "sans-serif"],
       },
       content: {
         brush: "url('../src/assets/brush.png')",
@@ -48,6 +50,8 @@ module.exports = {
       md: "1060px",
       lg: "1200px",
       xl: "1700px",
+      xxl: "2100px",
+      xxxl: "2500px",
     },
   },
   plugins: [],
