@@ -76,7 +76,7 @@ const Contact = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("contact")}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-title font-semibold text-4xl">
             <span className="text-primary-3 ">CONTACT</span> ME
           </p>
           <div className="flex justify-center md:justify-end my-5">
@@ -130,7 +130,7 @@ const Contact = ({ setSelectedPage }) => {
             {/* NAME */}
             <div className="mb-4">
               <input
-                className="w-full bg-primary-1 font-semibold placeholder-opaque-black p-3"
+                className="w-full bg-primary-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="NAME"
                 type="text"
                 {...register("name", {
@@ -140,7 +140,7 @@ const Contact = ({ setSelectedPage }) => {
                 })}
               />
               {errors.name && (
-                <p className="text-primary-2 mt-1 text-right drop-shadow-accent">
+                <p className="text-primary-2 font-bold mt-1 text-right drop-shadow-accent">
                   {errors.name.type === "required" && "This field is required"}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -153,7 +153,7 @@ const Contact = ({ setSelectedPage }) => {
             {/* EMAIL */}
             <div className="my-4">
               <input
-                className="w-full bg-primary-1 font-semibold placeholder-opaque-black p-3"
+                className="w-full bg-primary-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="EMAIL"
                 type="text"
                 formNoValidate="formnovalidate"
@@ -163,7 +163,7 @@ const Contact = ({ setSelectedPage }) => {
                 })}
               />
               {errors.email && (
-                <p className="text-primary-2 mt-1 text-right drop-shadow-accent">
+                <p className="text-primary-2 font-bold mt-1 text-right drop-shadow-accent">
                   {errors.email.type === "required" && "This field is required"}
                   {errors.email.type === "pattern" && "Invalid email address"}
                 </p>
@@ -173,13 +173,13 @@ const Contact = ({ setSelectedPage }) => {
             {/* MESSAGE */}
             <div className="my-4">
               <textarea
-                className="w-full bg-primary-1 font-semibold placeholder-opaque-black p-3 resize-none "
+                className="w-full bg-primary-1 font-normal text-dark-1 placeholder-black placeholder-opacity-40 p-3 resize-none "
                 placeholder="MESSAGE"
                 rows="7"
                 {...register("message", { required: true })}
               ></textarea>
               {errors.message && (
-                <p className="text-primary-2 mt-1 text-right drop-shadow-accent">
+                <p className="text-primary-2 font-bold mt-1 text-right drop-shadow-accent">
                   {errors.message.type === "required" &&
                     "This field is required"}
                   {errors.message.type === "maxLength" &&
@@ -190,14 +190,14 @@ const Contact = ({ setSelectedPage }) => {
             <div>
               {!isSubmited ? (
                 <button
-                  className="p-5 bg-primary-3 font-semibold  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"
+                  className="p-5 bg-primary-3 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"
                   type="submit"
                 >
                   SEND ME A MESSAGE
                 </button>
               ) : (
                 <button
-                  className="p-5 bg-primary-1 font-semibold  text-dark-1"
+                  className="p-5 bg-primary-1 font-normal  text-dark-1"
                   disabled
                 >
                   SENDING...
