@@ -62,8 +62,10 @@ function App() {
         </div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto">
-        <MySkills setSelectedPage={setSelectedPage} />
+      <div className="bg-pattern-skills">
+        <div className="w-5/6 mx-auto">
+          <MySkills setSelectedPage={setSelectedPage} />
+        </div>
       </div>
       <LineGradientPrimary1 />
       <div className="bg-pattern-projects">
