@@ -85,6 +85,21 @@ html {
   }
 }
 
+/* ---------------------------------------------CURSOR PUSLE */
+.cursor-animation-pulse {
+  animation-name: cursor-animation;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+}
+@keyframes cursor-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 /* ---------------------------------------------AIRPLANE */
 .airplane {
   left: calc(40vw + 100px);
