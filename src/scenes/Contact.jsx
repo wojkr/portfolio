@@ -76,7 +76,7 @@ const Contact = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("contact")}
       >
         <div>
-          <p className="font-title font-semibold text-4xl">
+          <p className="font-title font-semibold text-4xl md:text-end text-center">
             <span className="text-primary-3 ">CONTACT</span> ME
           </p>
           <div className="flex justify-center md:justify-end my-5">
@@ -187,7 +187,7 @@ const Contact = ({ setSelectedPage }) => {
                 </p>
               )}
             </div>
-            <div>
+            <div className="md:text-start text-center">
               {!isSubmited ? (
                 <button
                   className="p-5 bg-primary-3 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"

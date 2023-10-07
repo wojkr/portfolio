@@ -7,9 +7,7 @@ import airplanePic from "../assets/airplane.png";
 
 const Airplane = ({ height }) => {
   return (
-    <div
-      className={`w-full h-[${height}] h-[140px] overflow-hidden z-[-10] relative`}
-    >
+    <div className={`w-full h-[${height}] h-[140px] overflow-hidden relative`}>
       <div id="airplaneRadius" className="airplane">
         <div id="airplanePic">
           <img src={airplanePic} alt="" />
