@@ -10,11 +10,19 @@ const container = {
   visible: { transition: { staggerChildren: 0.2 } },
 };
 
+const projectVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
+
 const Project = ({ title, subtitle, desc, img, link }) => {
   const list = desc.split(",");
   return (
     //CONTAINER
-    <div className="relative xs:mb-6 mb-20 z-10">
+    <motion.div
+      variants={projectVariant}
+      className="relative xs:mb-6 mb-20 z-10"
+    >
       {/* Colored Box */}
       <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-2 text-sm md:text-sm lg:text-base">
         {/* Text Box */}
@@ -51,7 +59,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
       </div>
       {/* IMAGE */}
       <img className="relative w-5/12 p-4 z-100" src={img} alt={title} />
-    </div>
+    </motion.div>
   );
 };
 
@@ -82,7 +90,7 @@ const Projects = ({ setSelectedPage }) => {
       {/* PROJCECTS */}
       <div className="flex justify-center">
         <motion.div
-          className="sm:grid sm:grid-cols-2 md:gap-16 xs:gap-1 gap-16"
+          className="md:grid md:grid-cols-2 md:gap-16 xs:gap-1 gap-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
