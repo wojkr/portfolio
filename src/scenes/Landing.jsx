@@ -2,7 +2,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import profileImage from "../assets/profile-image.jpg";
+import profileImage from "../assets/profile-IMG.png";
+import Terminal from "../components/Terminal";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery(`(min-width:1060px)`);
@@ -10,26 +11,22 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="flex md:justify-between justify-center md:flex-row flex-col  md:items-center gap-16 py-24 min-h-[100dvh]"
+      className="flex md:justify-between justify-center md:flex-row flex-col md:items-center md:gap-16  py-24 min-h-[100dvh]"
     >
       {/* IMAGE */}
       <motion.div
         onViewportEnter={() => setSelectedPage("home")}
-        className="md:order-2 flex justify-center basis-3/5 z-10 md:mt-16 "
+        className="flex justify-center basis-3/5 z-10 md:mt-16 "
       >
         {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-[400px] before:w-full before:max-w-[400px] before:h-full before:max-h-[400px] md:before:max-w-[600px] md:before:max-h-[600px] before:border-2 before:border-primary-1 before:z-[-1]">
-            <img
-              src={profileImage}
-              alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full "
-            />
+          <div className="relative z-0 ml-20 before:absolute before:bottom-0 before:right-0 before:aspect-square before:rounded-full before:w-full  before:border-0 before:border-primary-1 before:z-[-1] hover:filter hover:brightness-105 hover:saturate-100 filter brightness-90 saturate-75 transition duration-500">
+            <img src={profileImage} alt="profile" className=" object-contain" />
           </div>
         ) : (
           <img
             src={profileImage}
             alt="profile"
-            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full "
+            className="hover:filter hover:brightness-110 hover:saturate-100 filter brightness-100 saturate-75  transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full "
           />
         )}
       </motion.div>
@@ -46,25 +43,43 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-5xl font-title text-center md:text-start xs:whitespace-nowrap">
-            <span className="text-6xl">W</span>OJCIECH{" "}
-            <span className="xs:relative xs:text-dark-1 xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[35px] before:-top-[40px] before:z-[-10]">
-              <span className="text-6xl z-30"> K</span>RUPA
-            </span>
+          <p className="md:text-[6dvw] text-[10dvw] leading-none font-title text-center md:text-end">
+            WOJCIECH <br></br>
+            <span className="md:text-[9.15dvw] text-[15.25dvw]">KRUPA</span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start ">
-            I am a passionate and motivated web developer. I have a degree in
-            aircraft engines and I am also a talented musician.
-          </p>
+          <motion.div
+            className="flex justify-center md:justify-end -mt-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }} //half div in view
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <SocialMediaIcons />
+          </motion.div>
         </motion.div>
-
-        {/* CALL TO ACTIONS */}
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }} //half div in view
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <Terminal />
+        </motion.div>
+        {/* CALL TO ACTIONS */}
+        <motion.div
+          className="flex mt-5 justify-center md:justify-end"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} //half div in view
+          transition={{ delay: 0.6, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -88,19 +103,6 @@ const Landing = ({ setSelectedPage }) => {
               </div>
             </AnchorLink>
           </div>
-        </motion.div>
-        <motion.div
-          className="flex mt-5 justify-center md:justify-start"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }} //half div in view
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <SocialMediaIcons />
         </motion.div>
       </div>
     </section>
