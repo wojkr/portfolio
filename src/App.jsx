@@ -67,13 +67,13 @@ function App() {
           <MySkills setSelectedPage={setSelectedPage} />
         </div>
       </div>
-      <LineGradientPrimary1 />
+      <LineGradientPrimary3 />
       <div className="bg-pattern-projects">
         <div className="w-5/6 mx-auto">
           <Projects setSelectedPage={setSelectedPage} />
         </div>
       </div>
-      <LineGradientPrimary3 />
+      <LineGradientPrimary1 />
       <div className="md:min-h-[100dvh] flex flex-col ">
         <div className="w-5/6 mx-auto flex-grow flex flex-col justify-center">
           <Contact setSelectedPage={setSelectedPage} />

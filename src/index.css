@@ -10,7 +10,7 @@ body,
   background-color: #2c233d;
   @apply text-white;
   @apply font-main;
-  font-weight: 200;
+  /* font-weight: 200; */
 }
 
 /* ---------------------------------------------BG IN MAIN SECTIONS */

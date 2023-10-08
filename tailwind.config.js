@@ -8,39 +8,31 @@ module.exports = {
         accent: "0 0 0.6rem #222",
       },
       boxShadow: {
-        primary1: "-4rem -4rem 0 -1px #2C233D,-4rem -4rem 0 1px #3CAEA3;",
-        primary2: "4rem -4rem 0 -1px #2C233D,4rem -4rem 0 1px #F39C12;",
-        primary3: "4rem -4rem 0 -1px #2C233D,4rem -4rem 0 1px #97CE4C;",
+        primary1: "4rem -4rem 0 -1px #2C233D,4rem -4rem 0 1px #E79CE1;",
+        primary2: "4rem -4rem 0 -1px #2C233D,4rem -4rem 0 1px #F05D5E;",
+        primary3: "4rem -4rem 0 -1px #2C233D,4rem -4rem 0 1px #0A81D1;",
       },
       colors: {
         "dark-1": "#2C233D",
-        "primary-1": "#3CAEA3",
-        "primary-2": "#F39C12",
-        "primary-3": "#97CE4C",
-        "primary-light-1": "#a4e0da",
-        "primary-light-2": "#f8c572",
-        "primary-light-3": "#c5e49b",
+        "primary-1": "#E79CE1",
+        "primary-2": "#F05D5E",
+        "primary-3": "#0A81D1",
+        "primary-light-1": "#EFBDEB",
+        "primary-light-2": "#F6A2A2",
+        "primary-light-3": "#77C5F9",
 
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
       backgroundImage: (theme) => ({
-        "gradient-3":
-          "linear-gradient(70deg, hsl(75, 57%, 55%),hsl(95, 57%, 55%))",
-        "gradient-2":
-          "linear-gradient(70deg, hsl(27, 90%, 51%),hsl(47, 90%, 51%))",
-        "gradient-1":
-          "linear-gradient(70deg, hsl(164,49%,46%),hsl(184,49%,46%))",
+        "gradient-3": "linear-gradient(70deg, #77C5F9, #0A81D1)",
+        "gradient-2": "linear-gradient(70deg, #F6A2A2, #F05D5E)",
+        "gradient-1": "linear-gradient(70deg, #EFBDEB, #E79CE1)",
       }),
       fontFamily: {
         title: ["Orbitron", "sans-serif"],
         main: ["Jost", "sans-serif"],
-        // title: ["Playfair Display", "serif"],
-        // poppins: ["Poppins", "sans-serif"],
-      },
-      content: {
-        brush: "url('../src/assets/brush.png')",
       },
     },
     screens: {

@@ -1,4 +1,4 @@
-import LineGradientPrimary3 from "../components/LineGradient3";
+import LineGradientPrimary1 from "../components/LineGradient1";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -77,10 +77,10 @@ const Contact = ({ setSelectedPage }) => {
       >
         <div>
           <p className="font-title font-semibold text-4xl md:text-end text-center">
-            <span className="text-primary-3 ">CONTACT</span> ME
+            CONTACT <span className="text-primary-1 ">ME</span>
           </p>
           <div className="flex justify-center md:justify-end my-5">
-            <LineGradientPrimary3 width="w-1/2" />
+            <LineGradientPrimary1 width="w-1/2" />
           </div>
         </div>
       </motion.div>
@@ -101,7 +101,7 @@ const Contact = ({ setSelectedPage }) => {
             <img
               src={contactImage}
               alt="contact"
-              className="shadow-primary2 h-fit"
+              className="shadow-primary1 h-fit"
             />
           ) : (
             <img src={contactImage} alt="contact" />
@@ -130,7 +130,7 @@ const Contact = ({ setSelectedPage }) => {
             {/* NAME */}
             <div className="mb-4">
               <input
-                className="w-full bg-primary-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
+                className="w-full bg-primary-light-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="NAME"
                 type="text"
                 {...register("name", {
@@ -153,7 +153,7 @@ const Contact = ({ setSelectedPage }) => {
             {/* EMAIL */}
             <div className="my-4">
               <input
-                className="w-full bg-primary-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
+                className="w-full bg-primary-light-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="EMAIL"
                 type="text"
                 formNoValidate="formnovalidate"
@@ -173,7 +173,7 @@ const Contact = ({ setSelectedPage }) => {
             {/* MESSAGE */}
             <div className="my-4">
               <textarea
-                className="w-full bg-primary-1 font-normal text-dark-1 placeholder-black placeholder-opacity-40 p-3 resize-none "
+                className="w-full bg-primary-light-1 font-normal text-dark-1 placeholder-black placeholder-opacity-40 p-3 resize-none "
                 placeholder="MESSAGE"
                 rows="7"
                 {...register("message", { required: true })}
@@ -190,14 +190,14 @@ const Contact = ({ setSelectedPage }) => {
             <div className="md:text-start text-center">
               {!isSubmited ? (
                 <button
-                  className="p-5 bg-primary-3 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"
+                  className="p-5 bg-primary-1 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"
                   type="submit"
                 >
                   SEND ME A MESSAGE
                 </button>
               ) : (
                 <button
-                  className="p-5 bg-primary-1 font-normal  text-dark-1"
+                  className="p-5 bg-primary-light-3 font-normal  text-dark-1"
                   disabled
                 >
                   SENDING...
@@ -207,10 +207,10 @@ const Contact = ({ setSelectedPage }) => {
                 <p
                   className={`${
                     mailSentConfirmation === mailMessages.success
-                      ? "text-primary-3"
+                      ? "text-primary-1"
                       : mailSentConfirmation === mailMessages.error
                       ? "text-primary-2"
-                      : "text-primary-1"
+                      : "text-primary-light-1"
                   } mt-4 text-left drop-shadow-accent 
                   ${
                     mailSentConfirmation === mailMessages.await

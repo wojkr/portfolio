@@ -63,16 +63,16 @@ const MySkills = ({ setSelectedPage }) => {
           </div>
           <div className="mt-5 mb-10 text-lg drop-shadow-accent ">
             <p className="font-bold">Engineering Background</p>
-            <p className="mb-2 text-primary-light-1 text-sm font-thin">
+            <p className="mb-2 text-primary-light-2 text-sm font-thin">
               B.Eng - Aeronautics and Space Technology,<br></br> Major in
               Aricraft Engines
             </p>
             <p className="font-bold">Creativity & Communication</p>
-            <p className="mb-2 text-primary-light-1 text-sm">
+            <p className="mb-2 text-primary-light-2 text-sm font-thin">
               Yamaha Music Europe Drum Teacher
             </p>
             <p className="font-bold">Communication & Issue Resolution</p>
-            <p className="mb-4 text-primary-light-1 text-sm">
+            <p className="mb-4 text-primary-light-2 text-sm font-thin">
               Hospitality Assistance Manger, <br></br>Client Relations
               Consultant
             </p>

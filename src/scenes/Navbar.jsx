@@ -17,20 +17,21 @@ const Link = ({
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage
-          ? desktop
-            ? isTopOfPage
-              ? "text-primary-2"
-              : "text-dark-1"
-            : "text-primary-2"
-          : ""
-      } ${
         desktop
-          ? isTopOfPage
-            ? "hover:text-primary-2"
-            : "hover:text-dark-1"
-          : "hover:text-primary-2"
-      } transition duration-500`}
+          ? //desktop
+            isTopOfPage
+            ? //top of page
+              selectedPage === lowerCasePage
+              ? "hover:text-primary-light-2 text-primary-2"
+              : "hover:text-primary-light-2 text-white"
+            : //middle
+            selectedPage === lowerCasePage
+            ? "text-primary-2 drop-shadow-none hover:drop-shadow-2xl "
+            : "text-dark-1 hover:text-primary-2 "
+          : //mobile
+            "hover:text-primary-2"
+      }
+       transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => {
         setSelectedPage(lowerCasePage);
@@ -52,12 +53,18 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <AnchorLink href="#home">
-          <h4 className="font-title text-3xl font-bold">WK</h4>
+          <h4
+            className={`font-title text-3xl font-bold ${
+              isTopOfPage ? "text-white" : "text-dark-1"
+            } transition duration-500`}
+          >
+            WK
+          </h4>
         </AnchorLink>
 
         {/* DESKTOP NAV */}
         {isAboveMediumScreens ? (
-          <div className="flex justify-between gap-16 font-light tracking-wider text-lg ">
+          <div className="flex justify-between gap-16 tracking-wider text-lg ">
             <Link
               page="Home"
               selectedPage={selectedPage}

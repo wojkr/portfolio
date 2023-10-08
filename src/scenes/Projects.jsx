@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import LineGradient1 from "../components/LineGradient1";
+import LineGradient3 from "../components/LineGradient3";
 import Nomad from "../assets/project-9.jpg";
 import Sweet from "../assets/project-4.jpg";
 import Solar from "../assets/project-3.jpg";
@@ -24,21 +24,18 @@ const Project = ({ title, subtitle, desc, img, link }) => {
       className="relative xs:mb-6 mb-20 z-10"
     >
       {/* Colored Box */}
-      <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-2 text-sm md:text-sm lg:text-base">
+      <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-3 text-sm md:text-sm lg:text-base">
         {/* Text Box */}
         <div className="pl-[15%] md:pl-[25%]  md:pt-5">
           {/* Title Box */}
           <p className="font-title font-bold leading-5">{title}</p>
           {/* Subtitle Box */}
-          <p className="font-title  text-primary-light-1">{subtitle}</p>
+          <p className="font-title  text-primary-light-3">{subtitle}</p>
 
           {/* List */}
           {list.map((l) => {
             return (
-              <li
-                key={l}
-                className="font-thin text-primary-light-1 md:leading-4 "
-              >
+              <li key={l} className="font-thin md:leading-4 ">
                 {l}
               </li>
             );
@@ -47,7 +44,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
           {/* BTN */}
           <div className="my-2">
             <a
-              className="bg-1 text-dark-1  py-1 px-2 font-normal hover:text-white transition duration-500"
+              className="bg-gradient-3 text-dark-1  py-1 px-2 font-normal hover:text-white transition duration-500"
               href={link}
               target="_blank"
               rel="noreferrer"
@@ -80,10 +77,10 @@ const Projects = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("projects")}
       >
         <p className="font-title mb-2 font-black sm:text-5xl text-4xl">
-          <span className="text-primary-1">PRO</span>JECTS
+          PRO<span className="text-primary-light-3">JECTS</span>
         </p>
         <div className="flex justify-center mt-5">
-          <LineGradient1 width="w-1/3" />
+          <LineGradient3 width="w-1/3" />
         </div>
       </motion.div>
 
@@ -129,7 +126,7 @@ const Projects = ({ setSelectedPage }) => {
       </div>
       <div className="mt-9 text-center">
         <a
-          className="bg-1 text-dark-1 py-3 px-7 font-semibold  hover:text-white transition duration-500 mt-[100px]"
+          className="bg-gradient-3 text-dark-1 py-3 px-7 font-semibold  hover:text-white transition duration-500 mt-[100px]"
           href="https://wojkr.github.io/projects/#"
           target="_blank"
           rel="noreferrer"
