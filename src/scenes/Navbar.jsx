@@ -29,7 +29,9 @@ const Link = ({
             ? "text-primary-2 drop-shadow-none hover:drop-shadow-2xl "
             : "text-dark-1 hover:text-primary-2 "
           : //mobile
-            "hover:text-primary-2"
+          selectedPage === lowerCasePage
+          ? "hover:text-primary-2 text-primary-2"
+          : "hover:text-primary-2"
       }
        transition duration-500`}
       href={`#${lowerCasePage}`}
@@ -96,7 +98,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
-            className={`${buttonBackground} rounded-full p-2`}
+            className={`${buttonBackground} rounded-full p-2 `}
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img src={menuIcon} alt="menu-icon" />
@@ -107,7 +109,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <div className="fixed right-0 bottom-0 h-full bg-primary-1 w-[300px]">
             {/* CLOSE ICON */}
             <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <button
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+                className="fill-dark-1"
+              >
                 <img src={closeIcon} alt="close-icon" />
               </button>
             </div>

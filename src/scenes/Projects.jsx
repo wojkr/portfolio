@@ -15,6 +15,38 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
+const projectsData = [
+  {
+    title: "Nomad Hive",
+    subtitle: "Marketplace App",
+    img: Nomad,
+    desc: "React, Next.js, Prisma, MongoDB",
+    link: "https://wojkr.github.io/projects/#1",
+  },
+  {
+    title: "SweetApp",
+    subtitle: "Rating Website",
+    img: Sweet,
+    desc: "NodeJS, Express, MongoDB, PassportAuth and more...",
+    link: "https://wojkr.github.io/projects/#2",
+  },
+  {
+    title: "Block Breaker",
+    subtitle: "Game",
+    img: Block,
+    desc: "10 Levels, 11 Bonuses, 7 Game Modes, Touchscreen Devices Mode",
+    link: "https://wojkr.github.io/projects/#3",
+  },
+  {
+    title: "Solar System",
+    subtitle: "Animation",
+    img: Solar,
+    desc: "CSS, SASS, no JS, Creativity",
+    link: "https://wojkr.github.io/projects/#4",
+  },
+];
+const btnAnimationGradient = `bg-gradient-animation-3 bg-size-300 bg-position-0 hover:bg-position-50 transition-all ease-linear duration-500`;
+
 const Project = ({ title, subtitle, desc, img, link }) => {
   const list = desc.split(",");
   return (
@@ -44,7 +76,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
           {/* BTN */}
           <div className="my-2">
             <a
-              className="bg-gradient-3 text-dark-1  py-1 px-2 font-normal hover:text-white transition duration-500"
+              className={`text-dark-1 py-1 px-2 font-normal hover:text-white ${btnAnimationGradient}`}
               href={link}
               target="_blank"
               rel="noreferrer"
@@ -76,6 +108,7 @@ const Projects = ({ setSelectedPage }) => {
         }}
         onViewportEnter={() => setSelectedPage("projects")}
       >
+        {/* ------------------------------------------------------------TITLE */}
         <p className="font-title mb-2 font-black sm:text-5xl text-4xl">
           PRO<span className="text-primary-light-3">JECTS</span>
         </p>
@@ -84,7 +117,7 @@ const Projects = ({ setSelectedPage }) => {
         </div>
       </motion.div>
 
-      {/* PROJCECTS */}
+      {/*------------------------------------------------------------PROJCECTS */}
       <div className="flex justify-center">
         <motion.div
           className="md:grid md:grid-cols-2 md:gap-16 xs:gap-1 gap-16"
@@ -94,39 +127,21 @@ const Projects = ({ setSelectedPage }) => {
           variants={container}
           onViewportEnter={() => setSelectedPage("projects")}
         >
-          <Project
-            title="Nomad Hive"
-            subtitle="Marketplace App"
-            img={Nomad}
-            desc="React, Next.js, Prisma, MongoDB"
-            link="https://wojkr.github.io/projects/#1"
-          />
-          <Project
-            title="SweetApp"
-            subtitle="Rating Website"
-            img={Sweet}
-            desc="NodeJS, Express, MongoDB, PassportAuth and more..."
-            link="https://wojkr.github.io/projects/#2"
-          />
-          <Project
-            title="Block Breaker"
-            subtitle="Game"
-            img={Block}
-            desc="10 Levels, 11 Bonuses, 7 Game Modes, Touchscreen Devices Mode"
-            link="https://wojkr.github.io/projects/#3"
-          />
-          <Project
-            title="Solar System"
-            subtitle="Animation"
-            img={Solar}
-            desc="CSS, SASS, no JS, Creativity"
-            link="https://wojkr.github.io/projects/#4"
-          />
+          {projectsData.map((p) => (
+            <Project
+              title={p.title}
+              subtitle={p.subtitle}
+              img={p.img}
+              desc={p.desc}
+              link={p.link}
+            />
+          ))}
         </motion.div>
       </div>
+      {/*------------------------------------------------------------BIG BTN TO PROJECTS INDEX */}
       <div className="mt-9 text-center">
         <a
-          className="bg-gradient-3 text-dark-1 py-3 px-7 font-semibold  hover:text-white transition duration-500 mt-[100px]"
+          className={`text-dark-1 py-3 px-7 font-semibold  hover:text-white mt-[100px] ${btnAnimationGradient}`}
           href="https://wojkr.github.io/projects/#"
           target="_blank"
           rel="noreferrer"

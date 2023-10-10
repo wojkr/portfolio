@@ -7,7 +7,8 @@ import Terminal from "../components/Terminal";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery(`(min-width:1060px)`);
-  // alert("CHECK THE PACKAGE JSON FOR THE NAME OF REPO");
+  const btnAnimationGradient = `bg-gradient-animation-2 bg-size-300 bg-position-100 hover:bg-position-50 transition-all ease-linear duration-[500ms]`;
+
   return (
     <section
       id="home"
@@ -85,7 +86,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="flex bg-2">
+          <div className={`flex ${btnAnimationGradient}`}>
             <AnchorLink
               className=" text-dark-1 py-3 px-7 font-semibold  hover:text-white transition duration-500 "
               onClick={() => setSelectedPage("contact")}
