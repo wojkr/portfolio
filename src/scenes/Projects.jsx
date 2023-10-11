@@ -95,13 +95,20 @@ const Project = ({ title, subtitle, desc, img, link }) => {
   const list = desc.split(",");
   return (
     //CONTAINER
-    <motion.div variants={projectVariant} className="flex xs:mb-6 mb-20 z-10">
+    <motion.div
+      variants={projectVariant}
+      className="flex md:flex-row flex-col xs:mb-6 mb-20 z-10"
+    >
       {/* IMAGE */}
-      <img className=" w-5/12 p-4 pr-0 h-fit z-10" src={img} alt={title} />
+      <img
+        className=" md:w-5/12 p-7 pb-0 md:p-4 md:pr-0 w-full h-fit max-w-[600px] z-10 "
+        src={img}
+        alt={title}
+      />
       {/* Colored Box */}
-      <div className="w-full -ml-[10%] pl-[10%] z-1 xs:border-2 border-primary-3 ">
+      <div className="w-full md:-ml-[10%] md:pl-[10%] md:mt-0 -mt-32 z-1 border-2 border-primary-3 ">
         {/* Text Box */}
-        <div className="h-full p-5">
+        <div className="h-full md:p-5 p-10 pt-40">
           {/* Title Box */}
           <p className="font-title font-bold leading-5">{title}</p>
           {/* Subtitle Box */}
@@ -137,7 +144,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
 const Projects = ({ setSelectedPage }) => {
   return (
     //------------------------------------------------------MAIN CONTAINER
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="py-32">
       <motion.div
         className="md:w-2/5 mx-auto text-center mb-7"
         initial="hidden"
@@ -181,9 +188,10 @@ const Projects = ({ setSelectedPage }) => {
         </motion.div>
       </div>
       {/*------------------------------------------------------------BIG BTN TO PROJECTS INDEX */}
-      <div className="mt-9 text-center">
+      <div className={`${btnAnimationGradient} mx-auto`}>
+        {/* <div className="mt-9 text-center"> */}
         <a
-          className={`text-dark-1 py-3 px-7 font-semibold  hover:text-white mt-[100px] ${btnAnimationGradient}`}
+          className={`block text-dark-1 py-3 px-7 font-semibold  hover:text-white ${btnAnimationGradient}`}
           href="https://wojkr.github.io/projects/#"
           target="_blank"
           rel="noreferrer"
