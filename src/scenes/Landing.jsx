@@ -32,7 +32,7 @@ const Landing = ({ setSelectedPage }) => {
         )}
       </motion.div>
       {/* MAIN SECTION */}
-      <div className="z-30 basis-2/5">
+      <div className="z-30 basis-2/5 md:mt-0 -mt-12">
         {/* HEADINGS */}
         <motion.div
           initial="hidden"
@@ -44,8 +44,10 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="md:text-[6dvw] text-[10dvw] leading-none font-title text-center md:text-end">
-            WOJCIECH <br></br>
+          <p className="md:text-[6dvw] text-[10dvw] leading-none font-title text-center md:text-end ">
+            <span className="md:drop-shadow-none drop-shadow-border-1px">
+              WOJCIECH <br></br>
+            </span>
             <span className="md:text-[9.15dvw] text-[15.25dvw]">KRUPA</span>
           </p>
           <motion.div
