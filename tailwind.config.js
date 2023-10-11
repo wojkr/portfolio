@@ -11,8 +11,22 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      dropShadow: {
-        accent: "0 0 0.6rem #222",
+      backgroundImage: (theme) => ({
+        "gradient-1": `linear-gradient(70deg, ${primaryLight1}, ${primary1})`,
+        "gradient-2": `linear-gradient(70deg, ${primaryLight2}, ${primary2})`,
+        "gradient-3": `linear-gradient(70deg, ${primaryLight3}, ${primary3})`,
+        "gradient-animation-2": `linear-gradient(70deg, ${primaryLight2}, ${primary2}, ${primaryLight2}, ${primary2})`,
+        "gradient-animation-3": `linear-gradient(70deg, ${primaryLight3}, ${primary3}, ${primaryLight3})`,
+      }),
+      backgroundPosition: {
+        "position-0": "0% 0%",
+        "position-50": "50% 0%",
+        "position-100": "100% 0%",
+      },
+      backgroundSize: {
+        "size-500": "500%",
+        "size-300": "300%",
+        "size-100": "100% 0",
       },
       boxShadow: {
         primary1: `4rem -4rem 0 -1px ${dark1},4rem -4rem 0 1px ${primary1}`,
@@ -32,26 +46,15 @@ module.exports = {
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
-      backgroundImage: (theme) => ({
-        "gradient-1": `linear-gradient(70deg, ${primaryLight1}, ${primary1})`,
-        "gradient-2": `linear-gradient(70deg, ${primaryLight2}, ${primary2})`,
-        "gradient-3": `linear-gradient(70deg, ${primaryLight3}, ${primary3})`,
-        "gradient-animation-2": `linear-gradient(70deg, ${primaryLight2}, ${primary2}, ${primaryLight2}, ${primary2})`,
-        "gradient-animation-3": `linear-gradient(70deg, ${primaryLight3}, ${primary3}, ${primaryLight3})`,
-      }),
-      backgroundSize: {
-        "size-500": "500%",
-        "size-300": "300%",
-        "size-100": "100% 0",
-      },
-      backgroundPosition: {
-        "position-0": "0% 0%",
-        "position-50": "50% 0%",
-        "position-100": "100% 0%",
+      dropShadow: {
+        accent: "0 0 0.6rem #222",
       },
       fontFamily: {
         title: ["Orbitron", "sans-serif"],
         main: ["Jost", "sans-serif"],
+      },
+      listStyleType: {
+        square: "square",
       },
     },
     screens: {

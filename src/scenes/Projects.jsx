@@ -45,38 +45,82 @@ const projectsData = [
     link: "https://wojkr.github.io/projects/#4",
   },
 ];
-const btnAnimationGradient = `bg-gradient-animation-3 bg-size-300 bg-position-0 hover:bg-position-50 transition-all ease-linear duration-500`;
+const btnAnimationGradient = `bg-gradient-animation-3 w-fit bg-size-300 bg-position-0 hover:bg-position-50 transition-all duration-500`;
 
+// const Project = ({ title, subtitle, desc, img, link }) => {
+//   const list = desc.split(",");
+//   return (
+//     //CONTAINER
+//     <motion.div
+//       variants={projectVariant}
+//       className="relative xs:mb-6 mb-20 z-10"
+//     >
+//       {/* Colored Box */}
+//       <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-3 text-sm md:text-sm lg:text-base">
+//         {/* Text Box */}
+//         <div className="pl-[15%] md:pl-[25%]  md:pt-5">
+//           {/* Title Box */}
+//           <p className="font-title font-bold leading-5">{title}</p>
+//           {/* Subtitle Box */}
+//           <p className="font-title  text-primary-light-3">{subtitle}</p>
+
+//           {/* List */}
+//           {list.map((l) => {
+//             return (
+//               <li key={l} className="font-thin md:leading-4 ">
+//                 {l}
+//               </li>
+//             );
+//           })}
+
+//           {/* BTN */}
+//           <div className="my-2">
+//             <a
+//               className={`text-dark-1 py-1 px-2 font-normal hover:text-white ${btnAnimationGradient}`}
+//               href={link}
+//               target="_blank"
+//               rel="noreferrer"
+//             >
+//               See Live Project
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//       {/* IMAGE */}
+//       <img className="relative w-5/12 p-4 z-100" src={img} alt={title} />
+//     </motion.div>
+//   );
+// };
 const Project = ({ title, subtitle, desc, img, link }) => {
   const list = desc.split(",");
   return (
     //CONTAINER
-    <motion.div
-      variants={projectVariant}
-      className="relative xs:mb-6 mb-20 z-10"
-    >
+    <motion.div variants={projectVariant} className="flex xs:mb-6 mb-20 z-10">
+      {/* IMAGE */}
+      <img className=" w-5/12 p-4 pr-0 h-fit z-10" src={img} alt={title} />
       {/* Colored Box */}
-      <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-3 text-sm md:text-sm lg:text-base">
+      <div className="w-full -ml-[10%] pl-[10%] z-1 xs:border-2 border-primary-3 ">
         {/* Text Box */}
-        <div className="pl-[15%] md:pl-[25%]  md:pt-5">
+        <div className="h-full p-5">
           {/* Title Box */}
           <p className="font-title font-bold leading-5">{title}</p>
           {/* Subtitle Box */}
-          <p className="font-title  text-primary-light-3">{subtitle}</p>
-
-          {/* List */}
-          {list.map((l) => {
-            return (
-              <li key={l} className="font-thin md:leading-4 ">
-                {l}
-              </li>
-            );
-          })}
+          <p className="font-title text-primary-light-3">{subtitle}</p>
+          <div className="list-square my-5">
+            {/* List */}
+            {list.map((l) => {
+              return (
+                <li key={l} className="font-thin md:leading-4">
+                  {l}
+                </li>
+              );
+            })}
+          </div>
 
           {/* BTN */}
-          <div className="my-2">
+          <div className={`${btnAnimationGradient} `}>
             <a
-              className={`text-dark-1 py-1 px-2 font-normal hover:text-white ${btnAnimationGradient}`}
+              className={`block py-1 px-2 text-dark-1 hover:text-white`}
               href={link}
               target="_blank"
               rel="noreferrer"
@@ -86,8 +130,6 @@ const Project = ({ title, subtitle, desc, img, link }) => {
           </div>
         </div>
       </div>
-      {/* IMAGE */}
-      <img className="relative w-5/12 p-4 z-100" src={img} alt={title} />
     </motion.div>
   );
 };
@@ -97,7 +139,7 @@ const Projects = ({ setSelectedPage }) => {
     //------------------------------------------------------MAIN CONTAINER
     <section id="projects" className="pt-48 pb-48">
       <motion.div
-        className="md:w-2/5 mx-auto text-center mb-7 "
+        className="md:w-2/5 mx-auto text-center mb-7"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
