@@ -48,6 +48,7 @@ module.exports = {
       },
       dropShadow: {
         accent: "0 0 0.6rem #222",
+        "border-1px": `0 0 1px ${dark1}`,
       },
       fontFamily: {
         title: ["Orbitron", "sans-serif"],

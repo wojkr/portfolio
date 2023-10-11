@@ -38,10 +38,10 @@ const MySkills = ({ setSelectedPage }) => {
   return (
     <section
       id="skills"
-      className="gap-16 py-10 min-h-[100dvh] flex flex-col justify-center z-10"
+      className="gap-16 py-32 min-h-[100dvh] flex flex-col justify-center z-10"
     >
       {/* FIRST ROW */}
-      <div className="md:flex justify-between xl:text-end md:text-start text-center md:items-start mt-32 gap-20">
+      <div className="md:flex justify-between xl:text-end md:text-start text-center md:items-start gap-20">
         <motion.div
           className="lg:w-1/3 md:w-1/2 "
           initial="hidden"
