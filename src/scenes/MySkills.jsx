@@ -102,7 +102,7 @@ const MySkills = ({ setSelectedPage }) => {
         </div>
       </div>
       {/* SKILLS */}
-      <section className="md:flex justify-between md:items-start md:h-full mt-32 md:gap-16 text-sm z-10">
+      <section className="md:flex justify-between md:items-start md:h-full md:gap-16 gap-16 text-sm z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -112,12 +112,12 @@ const MySkills = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="md:w-1/4 mb-16"
+          className="md:w-1/4 md:mb-0 mb-16"
         >
-          <div className="pb-2 relative before:absolute before:h-full before:border-primary-1 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
+          <div className="pb-2 relative before:absolute before:h-full before:border-primary-3 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
             <p className="font-bold font-title text-4xl mb-2">01</p>
             <p className="font-bold font-title text-4xl mb-2 drop-shadow-accent">
-              <span className="md:text-primary-light-1 text-primary-1 ">
+              <span className="md:text-primary-light-3 text-primary-3 ">
                 Front
               </span>{" "}
               End:
@@ -126,35 +126,35 @@ const MySkills = ({ setSelectedPage }) => {
 
           <div className="grid gap-4 grid-cols-3 text-center my-5 place-items-center">
             <div className="">
-              <SiReact className="text-5xl text-primary-1 mx-auto" />
+              <SiReact className="text-5xl text-primary-3 mx-auto" />
               React
             </div>
             <div className="">
-              <SiRedux className="text-5xl text-primary-1 mx-auto" />
+              <SiRedux className="text-5xl text-primary-3 mx-auto" />
               Redux Toolkit
             </div>
             <div className="">
-              <SiNextdotjs className="text-5xl text-primary-1 mx-auto" />
+              <SiNextdotjs className="text-5xl text-primary-3 mx-auto" />
               Next
             </div>
             <div className="">
-              <SiTailwindcss className="text-5xl text-primary-1 mx-auto" />
+              <SiTailwindcss className="text-5xl text-primary-3 mx-auto" />
               Tailwind
             </div>
             <div className="">
-              <SiMui className="text-5xl text-primary-1 mx-auto" />
+              <SiMui className="text-5xl text-primary-3 mx-auto" />
               MUI
             </div>
             <div className="text-center">
-              <SiBootstrap className="text-5xl text-primary-1 mx-auto" />
+              <SiBootstrap className="text-5xl text-primary-3 mx-auto" />
               Bootstrap
             </div>
             <div className="">
-              <SiSass className="text-5xl text-primary-1 mx-auto" />
+              <SiSass className="text-5xl text-primary-3 mx-auto" />
               SCSS{" "}
             </div>
             <div className="">
-              <SiPhotopea className="text-5xl text-primary-1 mx-auto" />
+              <SiPhotopea className="text-5xl text-primary-3 mx-auto" />
               Photopea
             </div>
           </div>
@@ -168,12 +168,12 @@ const MySkills = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="md:w-1/4 mb-16"
+          className="md:w-1/4 md:mb-0 mb-16"
         >
-          <div className="pb-2 relative before:absolute before:h-full before:border-primary-2 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
+          <div className="pb-2 relative before:absolute before:h-full before:border-primary-1 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
             <p className=" font-bold font-title text-4xl mb-2">02</p>
             <p className="font-bold font-title text-4xl mb-2 drop-shadow-accent ">
-              <span className="md:text-primary-light-2 text-primary-2 ">
+              <span className="md:text-primary-light-1 text-primary-1 ">
                 Back
               </span>{" "}
               End:
@@ -182,39 +182,39 @@ const MySkills = ({ setSelectedPage }) => {
 
           <div className="grid gap-4 grid-cols-3 text-center my-5 place-items-center">
             <div className="">
-              <SiDotnet className="text-5xl text-primary-2 mx-auto" />
+              <SiDotnet className="text-5xl text-primary-1 mx-auto" />
               .NET
             </div>
             <div className="">
-              <SiNodedotjs className="text-5xl text-primary-2 mx-auto" />
+              <SiNodedotjs className="text-5xl text-primary-1 mx-auto" />
               Node.js
             </div>
             <div className="">
-              <SiExpress className="text-5xl text-primary-2 mx-auto" />
+              <SiExpress className="text-5xl text-primary-1 mx-auto" />
               Express
             </div>
             <div className="">
-              <SiNuget className="text-5xl text-primary-2 mx-auto" />
+              <SiNuget className="text-5xl text-primary-1 mx-auto" />
               Nuget
             </div>
             <div className="">
-              <SiNpm className="text-5xl text-primary-2 mx-auto" />
+              <SiNpm className="text-5xl text-primary-1 mx-auto" />
               NPM
             </div>
             <div className="">
-              <SiMongodb className="text-5xl text-primary-2 mx-auto" />
+              <SiMongodb className="text-5xl text-primary-1 mx-auto" />
               MongoDB
             </div>
             <div className="">
-              <DiDotnet className="text-5xl text-primary-2 mx-auto" />
+              <DiDotnet className="text-5xl text-primary-1 mx-auto" />
               Entity Framework
             </div>
             <div className="">
-              <SiPrisma className="text-5xl text-primary-2 mx-auto" />
+              <SiPrisma className="text-5xl text-primary-1 mx-auto" />
               Prisma
             </div>
             <div className="">
-              <SiStrapi className="text-5xl text-primary-2 mx-auto" />
+              <SiStrapi className="text-5xl text-primary-1 mx-auto" />
               Strapi
             </div>
           </div>
@@ -228,53 +228,53 @@ const MySkills = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="md:w-1/4 mb-16"
+          className="md:w-1/4"
         >
-          <div className="pb-2 relative before:absolute before:h-full before:border-primary-3 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
+          <div className="pb-2 relative before:absolute before:h-full before:border-primary-2 before:border-2 before:z-[-1] before:w-1/2 before:left-1/2 md:before:w-3/4 md:before:left-1/4">
             <p className="font-bold font-title text-4xl mb-2">03</p>
             <p className="font-bold font-title text-4xl mb-2 drop-shadow-accent ">
-              <span className="md:text-primary-light-3 text-primary-3">
+              <span className="md:text-primary-light-2 text-primary-2">
                 And
               </span>{" "}
               More:
             </p>
           </div>
 
-          <div className="grid gap-4 grid-cols-3 text-center my-5 place-items-center">
+          <div className="grid gap-4 grid-cols-3 text-center mt-5 place-items-center">
             <div className="">
-              <SiCsharp className="text-5xl text-primary-3 mx-auto" />
+              <SiCsharp className="text-5xl text-primary-2 mx-auto" />
               C#
             </div>
             <div className="">
-              <SiJavascript className="text-5xl text-primary-3 mx-auto" />
+              <SiJavascript className="text-5xl text-primary-2 mx-auto" />
               Javascript
             </div>
             <div className="">
-              <SiTypescript className="text-5xl text-primary-3 mx-auto" />
+              <SiTypescript className="text-5xl text-primary-2 mx-auto" />
               Typescript
             </div>
             <div className="">
-              <SiGit className="text-5xl text-primary-3 mx-auto" />
+              <SiGit className="text-5xl text-primary-2 mx-auto" />
               Git
             </div>
             <div className="">
-              <SiHoppscotch className="text-5xl text-primary-3 mx-auto" />
+              <SiHoppscotch className="text-5xl text-primary-2 mx-auto" />
               Hoppscotch
             </div>
             <div className="">
-              <TbExchange className="text-5xl text-primary-3 mx-auto" />
+              <TbExchange className="text-5xl text-primary-2 mx-auto" />
               REST API
             </div>
             <div className="">
-              <FaRobot className="text-5xl text-primary-3 mx-auto " />
+              <FaRobot className="text-5xl text-primary-2 mx-auto " />
               AI tools
             </div>
             <div className="">
-              <SiFirebase className="text-5xl text-primary-3 mx-auto" />
+              <SiFirebase className="text-5xl text-primary-2 mx-auto" />
               Firebase
             </div>
             <div className="">
-              <SiGoogle className="text-5xl text-primary-3 mx-auto" />
+              <SiGoogle className="text-5xl text-primary-2 mx-auto" />
               Googling
             </div>
           </div>

@@ -169,7 +169,7 @@ const Projects = ({ setSelectedPage }) => {
       {/*------------------------------------------------------------PROJCECTS */}
       <div className="flex justify-center">
         <motion.div
-          className="md:grid md:grid-cols-2 md:gap-16 xs:gap-1 gap-16"
+          className="md:grid md:grid-cols-2 md:gap-16 xs:gap-1 gap-16 my-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
