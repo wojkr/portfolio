@@ -102,7 +102,7 @@ const MySkills = ({ setSelectedPage }) => {
         </div>
       </div>
       {/* SKILLS */}
-      <section className="md:flex justify-between md:items-start md:h-full md:gap-16 gap-16 text-sm z-10">
+      <section className="flex-col md:flex-row md:flex justify-between md:items-start md:h-full md:gap-16 gap-16 text-sm z-10 md:max-w-none max-w-md mx-auto md:mx-0 ">
         <motion.div
           initial="hidden"
           whileInView="visible"
