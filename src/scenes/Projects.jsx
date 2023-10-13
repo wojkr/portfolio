@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import LineGradient3 from "../components/LineGradient3";
-import Nomad from "../assets/project-9.jpg";
-import Sweet from "../assets/project-4.jpg";
-import Solar from "../assets/project-3.jpg";
-import Block from "../assets/project-2.jpg";
+import Nomad from "../assets/project-nomad.webp";
+import Sweet from "../assets/project-sweet.webp";
+import Solar from "../assets/project-solar.webp";
+import Block from "../assets/project-block.webp";
 
 const container = {
   hidden: {},
@@ -47,50 +47,6 @@ const projectsData = [
 ];
 const btnAnimationGradient = `bg-gradient-animation-3 w-fit bg-size-300 bg-position-0 hover:bg-position-50 transition-all duration-500`;
 
-// const Project = ({ title, subtitle, desc, img, link }) => {
-//   const list = desc.split(",");
-//   return (
-//     //CONTAINER
-//     <motion.div
-//       variants={projectVariant}
-//       className="relative xs:mb-6 mb-20 z-10"
-//     >
-//       {/* Colored Box */}
-//       <div className="absolute h-auto min-h-full z-1 top-0 ml-[30%] w-[70%] xs:border-2 border-primary-3 text-sm md:text-sm lg:text-base">
-//         {/* Text Box */}
-//         <div className="pl-[15%] md:pl-[25%]  md:pt-5">
-//           {/* Title Box */}
-//           <p className="font-title font-bold leading-5">{title}</p>
-//           {/* Subtitle Box */}
-//           <p className="font-title  text-primary-light-3">{subtitle}</p>
-
-//           {/* List */}
-//           {list.map((l) => {
-//             return (
-//               <li key={l} className="font-thin md:leading-4 ">
-//                 {l}
-//               </li>
-//             );
-//           })}
-
-//           {/* BTN */}
-//           <div className="my-2">
-//             <a
-//               className={`text-dark-1 py-1 px-2 font-normal hover:text-white ${btnAnimationGradient}`}
-//               href={link}
-//               target="_blank"
-//               rel="noreferrer"
-//             >
-//               See Live Project
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//       {/* IMAGE */}
-//       <img className="relative w-5/12 p-4 z-100" src={img} alt={title} />
-//     </motion.div>
-//   );
-// };
 const Project = ({ title, subtitle, desc, img, link }) => {
   const list = desc.split(",");
   return (
@@ -101,12 +57,12 @@ const Project = ({ title, subtitle, desc, img, link }) => {
     >
       {/* IMAGE */}
       <img
-        className=" md:w-5/12 p-7 pb-0 md:p-4 md:pr-0 w-full h-fit max-w-[600px] z-10 "
+        className="md:w-5/12 p-7 pb-0 md:p-4 md:pr-0 w-full h-fit max-w-[600px] z-10"
         src={img}
         alt={title}
       />
       {/* Colored Box */}
-      <div className="w-full md:-ml-[10%] md:pl-[10%] md:mt-0 -mt-32 z-1 border-2 border-primary-3 ">
+      <div className="w-full md:-ml-[10%] md:pl-[10%] md:mt-0 -mt-32 z-1 border-2 border-primary-3">
         {/* Text Box */}
         <div className="h-full md:p-5 p-10 pt-40">
           {/* Title Box */}

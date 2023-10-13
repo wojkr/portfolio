@@ -2,7 +2,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import profileImage from "../assets/profile-IMG.png";
+import profileImage from "../assets/profile-IMG.webp";
 import Terminal from "../components/Terminal";
 
 const Landing = ({ setSelectedPage }) => {
@@ -19,17 +19,17 @@ const Landing = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("home")}
         className="flex justify-center basis-3/5 z-10 md:mt-16 "
       >
-        {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:bottom-0 before:right-0 before:aspect-square before:rounded-full before:w-full  before:border-0 before:border-primary-1 before:z-[-1] hover:filter hover:brightness-105 hover:saturate-100 filter brightness-90 saturate-75 transition duration-500">
+        {/* {isAboveMediumScreens ? (
+          <div className="relative z-0 ml-20 before:absolute before:bottom-0 before:right-0 before:aspect-square before:rounded-full before:w-full before:border-0 before:border-primary-1 before:z-[-1] hover:filter hover:brightness-105 hover:saturate-100 filter brightness-90 saturate-75 transition duration-500">
             <img src={profileImage} alt="profile" className=" object-contain" />
           </div>
-        ) : (
-          <img
-            src={profileImage}
-            alt="profile"
-            className="hover:filter hover:brightness-110 hover:saturate-100 filter brightness-100 saturate-75  transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-full "
-          />
-        )}
+        ) : ( */}
+        <img
+          src={profileImage}
+          alt="profile"
+          className="hover:filter hover:brightness-110 hover:saturate-100 filter brightness-100 saturate-75 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+        />
+        {/* )} */}
       </motion.div>
       {/* MAIN SECTION */}
       <div className="z-30 basis-2/5 md:mt-0 -mt-12">

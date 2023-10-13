@@ -30,7 +30,7 @@ import { DiDotnet } from "react-icons/di";
 import { TbExchange } from "react-icons/tb";
 import { FaRobot } from "react-icons/fa";
 
-import mySkillsImg from "../assets/my-skills.png";
+import mySkillsImg from "../assets/my-skills.webp";
 
 const MySkills = ({ setSelectedPage }) => {
   const isAboveMediumLargeScreens = useMediaQuery("(min-width:1300px)");
@@ -90,7 +90,7 @@ const MySkills = ({ setSelectedPage }) => {
                 <img
                   src={mySkillsImg}
                   alt=""
-                  className="mx-auto w-full max-w-[400px] md:max-w-[1000px]"
+                  className="mx-auto w-full max-w-[400px] md:max-w-[600px]"
                 />
               </div>
             </motion.div>
