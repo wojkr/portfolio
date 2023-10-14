@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import LineGradient3 from "../components/LineGradient3";
-import Nomad from "../assets/project-nomad.webp";
-import Sweet from "../assets/project-sweet.webp";
-import Solar from "../assets/project-solar.webp";
-import Block from "../assets/project-block.webp";
+import Nomad550 from "../assets/nomad-550.webp";
+import Nomad350 from "../assets/nomad-350.webp";
+import Sweet550 from "../assets/sweet-550.webp";
+import Sweet350 from "../assets/sweet-350.webp";
+import Solar550 from "../assets/solar-550.webp";
+import Solar350 from "../assets/solar-350.webp";
+import Block550 from "../assets/block-550.webp";
+import Block350 from "../assets/block-350.webp";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const container = {
   hidden: {},
@@ -19,36 +24,42 @@ const projectsData = [
   {
     title: "Nomad Hive",
     subtitle: "Marketplace App",
-    img: Nomad,
+    img550: Nomad550,
+    img350: Nomad350,
     desc: "React, Next.js, Prisma, MongoDB",
     link: "https://wojkr.github.io/projects/#1",
   },
   {
     title: "SweetApp",
     subtitle: "Rating Website",
-    img: Sweet,
+    img550: Sweet550,
+    img350: Sweet350,
     desc: "NodeJS, Express, MongoDB, PassportAuth and more...",
     link: "https://wojkr.github.io/projects/#2",
   },
   {
     title: "Block Breaker",
     subtitle: "Game",
-    img: Block,
+    img550: Block550,
+    img350: Block350,
     desc: "10 Levels, 11 Bonuses, 7 Game Modes, Touchscreen Devices Mode",
     link: "https://wojkr.github.io/projects/#3",
   },
   {
     title: "Solar System",
     subtitle: "Animation",
-    img: Solar,
+    img550: Solar550,
+    img350: Solar350,
     desc: "CSS, SASS, no JS, Creativity",
     link: "https://wojkr.github.io/projects/#4",
   },
 ];
 const btnAnimationGradient = `bg-gradient-animation-3 w-fit bg-size-300 bg-position-0 hover:bg-position-50 transition-all duration-500`;
 
-const Project = ({ title, subtitle, desc, img, link }) => {
+const Project = ({ title, subtitle, desc, img350, img550, link }) => {
   const list = desc.split(",");
+  const isAbove500PxScreen = useMediaQuery("(min-width:500px)");
+  const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
   return (
     //CONTAINER
     <motion.div
@@ -57,8 +68,8 @@ const Project = ({ title, subtitle, desc, img, link }) => {
     >
       {/* IMAGE */}
       <img
-        className="md:w-5/12 p-7 pb-0 md:p-4 md:pr-0 w-full h-fit max-w-[600px] z-10"
-        src={img}
+        className="md:w-5/12 p-7 pb-0 md:p-4 md:pr-0 w-full h-fit max-w-[550px] z-10"
+        src={isAbove500PxScreen && !isAboveMediumScreen ? img550 : img350}
         alt={title}
       />
       {/* Colored Box */}
@@ -69,7 +80,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
           <p className="font-title font-bold leading-5">{title}</p>
           {/* Subtitle Box */}
           <p className="font-title text-primary-light-3">{subtitle}</p>
-          <div className="list-square my-5">
+          <ul className="list-square my-5">
             {/* List */}
             {list.map((l) => {
               return (
@@ -78,7 +89,7 @@ const Project = ({ title, subtitle, desc, img, link }) => {
                 </li>
               );
             })}
-          </div>
+          </ul>
 
           {/* BTN */}
           <div className={`${btnAnimationGradient} `}>
@@ -134,9 +145,11 @@ const Projects = ({ setSelectedPage }) => {
         >
           {projectsData.map((p) => (
             <Project
+              key={p.title}
               title={p.title}
               subtitle={p.subtitle}
-              img={p.img}
+              img350={p.img350}
+              img550={p.img550}
               desc={p.desc}
               link={p.link}
             />

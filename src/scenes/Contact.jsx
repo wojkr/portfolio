@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 
-import contactImage from "../assets/contact-image.jpg";
+import contactImage600 from "../assets/contact-600.webp";
+import contactImage400 from "../assets/contact-400.webp";
 import { useState } from "react";
 
 const Contact = ({ setSelectedPage }) => {
@@ -59,6 +60,7 @@ const Contact = ({ setSelectedPage }) => {
   };
 
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
+  const isAbove500PxScreen = useMediaQuery("(min-width:500px)");
 
   return (
     <section id="contact" className="pt-32 pb-4">
@@ -99,12 +101,15 @@ const Contact = ({ setSelectedPage }) => {
         >
           {isAboveMediumScreen ? (
             <img
-              src={contactImage}
+              src={contactImage600}
               alt="contact"
               className="shadow-primary1 h-fit"
             />
           ) : (
-            <img src={contactImage} alt="contact" />
+            <img
+              src={isAbove500PxScreen ? contactImage600 : contactImage400}
+              alt="contact"
+            />
           )}
         </motion.div>
 
@@ -121,12 +126,7 @@ const Contact = ({ setSelectedPage }) => {
           }}
         >
           {/* FORM */}
-          <form
-            // target="_blank"
-            onSubmit={onSubmit}
-            // method="POST"
-            noValidate
-          >
+          <form onSubmit={onSubmit} noValidate>
             {/* NAME */}
             <div className="mb-4">
               <input

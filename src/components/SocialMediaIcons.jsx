@@ -13,6 +13,7 @@ const SocialMediaIcons = ({ color = false }) => {
         target="_blank"
         className="hover:opacity-50 transition duration-500"
         rel="noreferrer"
+        aria-label="Visit my LinkedIn profile"
       >
         <SiLinkedin />
       </a>
@@ -22,6 +23,7 @@ const SocialMediaIcons = ({ color = false }) => {
         target="_blank"
         className="hover:opacity-50 transition duration-500 h-[30px] w-[30px]"
         rel="noreferrer"
+        aria-label="Visit my GitHub profile"
       >
         <SiGithub />
       </a>
@@ -30,6 +32,7 @@ const SocialMediaIcons = ({ color = false }) => {
         target="_blank"
         className="hover:opacity-50 transition duration-500 h-[30px] w-[30px]"
         rel="noreferrer"
+        aria-label="Explore my Live Projects"
       >
         <TbBuildingBroadcastTower />
       </a>

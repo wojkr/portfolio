@@ -89,14 +89,18 @@ const MySkills = ({ setSelectedPage }) => {
               <div className="relative z-0 ml-20 before:absolute before:scale-y-[70%] xl:before:scale-x-[110%] before:scale-x-[85%] before:top-[2%] before:-left-[7%] xl:before:left-[10%] xxl:before:left-[25%] xxxl:before:left-[25%] before:w-full before:max-w-[400px] before:h-full before:max-h-[400px] md:before:max-w-[600px] md:before:max-h-[600px] before:border-2 before:border-primary-2 before:z-[-1]">
                 <img
                   src={mySkillsImg}
-                  alt=""
+                  alt="device frame mockup - nomad hive project"
                   className="mx-auto w-full max-w-[400px] md:max-w-[600px]"
                 />
               </div>
             </motion.div>
           ) : (
             <motion.div>
-              <img src={mySkillsImg} alt="" className="mx-auto h-fit" />
+              <img
+                src={mySkillsImg}
+                alt="device frame mockup - nomad hive project"
+                className="mx-auto h-fit max-w-[600px]"
+              />
             </motion.div>
           )}
         </div>
