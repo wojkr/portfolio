@@ -10,7 +10,7 @@ const DotGroup = ({ setSelectedPage, selectedPage }) => {
         } w-3 h-3`}
         href="#home"
         onClick={() => setSelectedPage("home")}
-        aria-label="link to home section"
+        aria-label="Navigate to the Home page"
       ></AnchorLink>
       <AnchorLink
         className={`${
@@ -18,7 +18,7 @@ const DotGroup = ({ setSelectedPage, selectedPage }) => {
         } w-3 h-3`}
         href="#skills"
         onClick={() => setSelectedPage("skills")}
-        aria-label="link to skills section"
+        aria-label="Navigate to the Skills section"
       ></AnchorLink>
       <AnchorLink
         className={`${
@@ -26,7 +26,7 @@ const DotGroup = ({ setSelectedPage, selectedPage }) => {
         } w-3 h-3`}
         href="#projects"
         onClick={() => setSelectedPage("projects")}
-        aria-label="link to projects section"
+        aria-label="Navigate to the Projects section"
       ></AnchorLink>
       <AnchorLink
         className={`${
@@ -34,7 +34,7 @@ const DotGroup = ({ setSelectedPage, selectedPage }) => {
         } w-3 h-3`}
         href="#contact"
         onClick={() => setSelectedPage("contact")}
-        aria-label="link to contact me section"
+        aria-label="Navigate to the Contact Me section"
       ></AnchorLink>
     </div>
   );

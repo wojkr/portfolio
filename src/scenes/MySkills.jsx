@@ -99,7 +99,7 @@ const MySkills = ({ setSelectedPage }) => {
               <img
                 src={mySkillsImg}
                 alt="device frame mockup - nomad hive project"
-                className="mx-auto h-full max-w-[600px]"
+                className="mx-auto w-full max-w-[600px]"
               />
             </motion.div>
           )}
