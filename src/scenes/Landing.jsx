@@ -47,7 +47,7 @@ const Landing = ({ setSelectedPage }) => {
             <span className="md:text-[9.15dvw] text-[15.25dvw]">KRUPA</span>
           </p>
           <motion.div
-            className="flex justify-center md:justify-end -mt-8"
+            className="flex justify-center md:justify-end"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }} //half div in view
