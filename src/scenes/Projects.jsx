@@ -84,7 +84,7 @@ const Project = ({ title, subtitle, desc, img350, img550, link }) => {
             {/* List */}
             {list.map((l) => {
               return (
-                <li key={l} className="font-thin md:leading-4">
+                <li key={l} className="font-thin md:leading-4 ml-5">
                   {l}
                 </li>
               );
