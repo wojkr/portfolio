@@ -8,6 +8,8 @@ import Solar550 from "../assets/solar-550.webp";
 import Solar350 from "../assets/solar-350.webp";
 import Block550 from "../assets/block-550.webp";
 import Block350 from "../assets/block-350.webp";
+import Ride550 from "../assets/ride-550.webp";
+import Ride350 from "../assets/ride-350.webp";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const container = {
@@ -26,7 +28,7 @@ const projectsData = [
     subtitle: "Marketplace App",
     img550: Nomad550,
     img350: Nomad350,
-    desc: "React, Next.js, Prisma, MongoDB",
+    desc: "React+Tailwind, Next.js, Prisma, MongoDB",
     link: "https://wojkr.github.io/projects/#1",
   },
   {
@@ -36,6 +38,14 @@ const projectsData = [
     img350: Sweet350,
     desc: "NodeJS, Express, MongoDB, PassportAuth and more...",
     link: "https://wojkr.github.io/projects/#2",
+  },
+  {
+    title: "Ride Rite",
+    subtitle: "eCommerce",
+    img550: Ride550,
+    img350: Ride350,
+    desc: "React+MUI, Redux, Strapi CMS, Stripe Payment",
+    link: "https://wojkr.github.io/ride-rite-client",
   },
   {
     title: "Block Breaker",
@@ -84,7 +94,7 @@ const Project = ({ title, subtitle, desc, img350, img550, link }) => {
             {/* List */}
             {list.map((l) => {
               return (
-                <li key={l} className="font-thin md:leading-4 ml-5">
+                <li key={l} className="font-thin ml-5">
                   {l}
                 </li>
               );
