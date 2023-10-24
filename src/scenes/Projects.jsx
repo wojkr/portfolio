@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
 import LineGradient3 from "../components/LineGradient3";
-import Nomad550 from "../assets/nomad-550.webp";
-import Nomad350 from "../assets/nomad-350.webp";
-import Sweet550 from "../assets/sweet-550.webp";
-import Sweet350 from "../assets/sweet-350.webp";
-import Solar550 from "../assets/solar-550.webp";
-import Solar350 from "../assets/solar-350.webp";
-import Block550 from "../assets/block-550.webp";
-import Block350 from "../assets/block-350.webp";
-import Ride550 from "../assets/ride-550.webp";
-import Ride350 from "../assets/ride-350.webp";
 import useMediaQuery from "../hooks/useMediaQuery";
-
+import { projectsData } from "../projectsData";
 const container = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.2 } },
@@ -22,48 +12,6 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const projectsData = [
-  {
-    title: "Nomad Hive",
-    subtitle: "Marketplace App",
-    img550: Nomad550,
-    img350: Nomad350,
-    desc: "React+Tailwind, Next.js, Prisma, MongoDB",
-    link: "https://wojkr.github.io/projects/#1",
-  },
-  {
-    title: "SweetApp",
-    subtitle: "Rating Website",
-    img550: Sweet550,
-    img350: Sweet350,
-    desc: "NodeJS, Express, MongoDB, PassportAuth and more...",
-    link: "https://wojkr.github.io/projects/#2",
-  },
-  {
-    title: "Ride Rite",
-    subtitle: "eCommerce",
-    img550: Ride550,
-    img350: Ride350,
-    desc: "React+MUI, Redux, Strapi CMS, Stripe Payment",
-    link: "https://wojkr.github.io/ride-rite-client",
-  },
-  {
-    title: "Block Breaker",
-    subtitle: "Game",
-    img550: Block550,
-    img350: Block350,
-    desc: "10 Levels, 11 Bonuses, 7 Game Modes, Touchscreen Devices Mode",
-    link: "https://wojkr.github.io/projects/#3",
-  },
-  {
-    title: "Solar System",
-    subtitle: "Animation",
-    img550: Solar550,
-    img350: Solar350,
-    desc: "CSS, SASS, no JS, Creativity",
-    link: "https://wojkr.github.io/projects/#4",
-  },
-];
 const btnAnimationGradient = `bg-gradient-animation-3 w-fit bg-size-300 bg-position-0 hover:bg-position-50 transition-all duration-500`;
 
 const Project = ({ title, subtitle, desc, img350, img550, link }) => {
