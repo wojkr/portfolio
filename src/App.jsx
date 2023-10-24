@@ -14,10 +14,14 @@ import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import Airplane from "./scenes/Airplane";
 
+import triggerSpinUp from "./helpers/triggerSpinUp";
+
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  triggerSpinUp();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
