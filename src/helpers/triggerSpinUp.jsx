@@ -8,6 +8,7 @@ const triggerSpinUp = (query) => {
     );
     projectsData.forEach((p) => {
       if (p.isTurnOnServerNeeded) {
+        console.log(`      Sending request to ${p.title}`);
         fetch(p.serverUrl, {
           headers: {
             "Content-Type": "application/json",

@@ -34,7 +34,7 @@ export const projectsData = [
     img550: Ride550,
     img350: Ride350,
     desc: "React+MUI, Redux, Strapi CMS, Stripe Payment",
-    link: "https://wojkr.github.io/ride-rite-client",
+    link: "https://wojkr.github.io/projects/#5",
     serverUrl: "https://ride-rite-server.onrender.com/api/items",
     isTurnOnServerNeeded: true,
   },
