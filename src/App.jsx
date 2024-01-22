@@ -1,5 +1,3 @@
-// import reactLogo from "./assets/solar.jpg";
-// import viteLogo from "/vite.svg";
 import { useEffect, useLayoutEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
@@ -15,12 +13,14 @@ import Footer from "./scenes/Footer";
 import Airplane from "./scenes/Airplane";
 
 import triggerSpinUp from "./helpers/triggerSpinUp";
+import trafficEmailNotification from "./helpers/trafficEmailNotification";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   triggerSpinUp();
+  trafficEmailNotification();
 
   useEffect(() => {
     const handleScroll = () => {
