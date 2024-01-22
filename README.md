@@ -27,3 +27,5 @@ To get started with portfolio-page, follow these steps:
 1. Clone this repository to your local machine
 2. Run `npm install` to install the necessary dependencies
 3. Run `npm start` to start the development server
+
+To check if the production build looks OK in your local environment run `npm run check`
