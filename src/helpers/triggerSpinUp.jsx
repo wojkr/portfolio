@@ -4,27 +4,38 @@ import { projectsData } from "../projectsData";
 const triggerSpinUp = (query) => {
   const runServers = () => {
     console.log(
-      "----- Sent requests to trigger Render.com server spin-up behavior ----- "
+      "----- Requests to trigger the Render.com server spin-up behavior ----- "
     );
-    projectsData.forEach((p) => {
+    projectsData.forEach(async (p) => {
       if (p.isTurnOnServerNeeded) {
         console.log(`      Sending request to ${p.title}`);
-        fetch(p.serverUrl, {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        })
-          .then((response) =>
-            console.log(`RESOLVED for ${p.title}. RES: ${response}`)
-          )
-          .catch((e) => console.log(e.message));
+        try {
+          await fetch(p.serverUrl, {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          })
+            .then((responseJSON) => responseJSON.json())
+            .then((response) => {
+              console.log(`      RESOLVED for ${p.title}:`);
+              console.log(response);
+            })
+            .catch((e) => {
+              console.log(`      RESOLVED for ${p.title}:`);
+              console.warn(`     Error: ${e.message}`);
+            });
+        } catch (e) {
+          console.warn(`      Caught error (${p.title}):`);
+          console.warn(e);
+        }
       }
     });
   };
 
   useLayoutEffect(() => {
-    setTimeout(runServers(), 1000);
+    const triggerSpinUpTimeout = setTimeout(runServers(), 1000);
+    return clearTimeout(triggerSpinUpTimeout);
   }, []);
 
   return;
