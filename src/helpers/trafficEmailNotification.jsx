@@ -10,17 +10,14 @@ const MailData = {
 const trafficEmailNotification = () => {
   const sendEmail = async (e) => {
     try {
-      await fetch(
-        "https://formsubmit.co/ajax/2dfe1cb18982311021ec0a63158f3740",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(MailData),
-        }
-      )
+      await fetch("https://usebasin.com/f/4d404e5170ee", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(MailData),
+      })
         .then(console.log("----- Traffic notification sent"))
         .catch((error) => {
           console.warn("Email notification error:");

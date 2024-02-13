@@ -24,7 +24,7 @@ const Contact = ({ setSelectedPage }) => {
     await: "Sending...",
   };
   const sendEmail = async (e) => {
-    await fetch("https://formsubmit.co/ajax/2dfe1cb18982311021ec0a63158f3740", {
+    await fetch("https://usebasin.com/f/4d404e5170ee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,6 +52,8 @@ const Contact = ({ setSelectedPage }) => {
       const isValid = await trigger();
       if (isValid) {
         setMailSentConfirmation(mailMessages.await);
+        console.log("Email: Input");
+        console.log(e);
         await sendEmail(e);
       } else {
         setIsSubmited(false);
