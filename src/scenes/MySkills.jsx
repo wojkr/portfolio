@@ -185,7 +185,7 @@ const MySkills = ({ setSelectedPage }) => {
 
           <div className="grid gap-4 grid-cols-3 text-center my-5 place-items-center">
             <div className="">
-              <SiDotnet className="text-5xl text-primary-1 mx-auto" />
+              <SiDotnet className="text-5xl bg-primary-1 text-dark-1 py-1 mx-auto" />
               .NET
             </div>
             <div className="">
