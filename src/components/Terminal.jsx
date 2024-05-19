@@ -1,6 +1,4 @@
 import { useLayoutEffect, useState } from "react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { TbBuildingBroadcastTower } from "react-icons/tb";
 
 const Terminal = () => {
   const terminalMessages = [
@@ -13,7 +11,7 @@ const Terminal = () => {
       text: [
         ".NET, ASP.NET, EF",
         "Node.js, Express",
-        "MongoDB, SQLite",
+        "SQL, MongoDB, SQLite",
         "Prisma, Strapi",
       ],
     },

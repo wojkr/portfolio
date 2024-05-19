@@ -15,8 +15,6 @@ import {
   SiMui,
   SiNextdotjs,
   SiNodedotjs,
-  SiNpm,
-  SiNuget,
   SiPhotopea,
   SiPrisma,
   SiReact,
@@ -29,6 +27,7 @@ import {
 import { DiDotnet } from "react-icons/di";
 import { TbExchange } from "react-icons/tb";
 import { FaRobot } from "react-icons/fa";
+import { PiFileSqlLight } from "react-icons/pi";
 
 import mySkillsImg from "../assets/my-skills.webp";
 
@@ -198,16 +197,16 @@ const MySkills = ({ setSelectedPage }) => {
               Express
             </div>
             <div className="">
-              <SiNuget className="text-5xl text-primary-1 mx-auto" />
-              Nuget
-            </div>
-            <div className="">
-              <SiNpm className="text-5xl text-primary-1 mx-auto" />
-              NPM
+              <PiFileSqlLight className="text-5xl text-primary-1 mx-auto" />
+              SQL
             </div>
             <div className="">
               <SiMongodb className="text-5xl text-primary-1 mx-auto" />
               MongoDB
+            </div>
+            <div className="">
+              <SiDotnet className="text-5xl text-primary-1 mx-auto" />
+              ASP.NET
             </div>
             <div className="">
               <DiDotnet className="text-5xl text-primary-1 mx-auto" />
