@@ -26,21 +26,21 @@ const Link = ({
               : "hover:text-primary-light-2 text-white"
             : //middle
             selectedPage === lowerCasePage
-            ? "text-primary-2 drop-shadow-none hover:drop-shadow-2xl "
+            ? "text-primary-2"
             : "text-dark-1 hover:text-primary-2 "
           : //mobile
           selectedPage === lowerCasePage
           ? "hover:text-primary-2 text-primary-2"
           : "hover:text-primary-2"
       }
-       transition duration-500`}
+       transition duration-500 uppercase`}
       href={`#${lowerCasePage}`}
       onClick={() => {
         setSelectedPage(lowerCasePage);
         setIsMenuToggled(false);
       }}
     >
-      {page.toUpperCase()}
+      {page}
     </AnchorLink>
   );
 };

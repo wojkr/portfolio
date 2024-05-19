@@ -54,8 +54,8 @@ const MySkills = ({ setSelectedPage }) => {
           onViewportEnter={() => setSelectedPage("skills")}
         >
           {/* /MY SKILLS COLUMN */}
-          <p className="font-title mb-2 font-black text-5xl">
-            MY <span className="text-primary-2 ">SKILLS</span>{" "}
+          <p className="font-title mb-2 font-black text-5xl uppercase">
+            my <span className="text-primary-2 ">skills</span>{" "}
           </p>{" "}
           <div className="flex justify-center md:justify-start xl:justify-end my-5">
             <LineGradient width="w-1/4" />

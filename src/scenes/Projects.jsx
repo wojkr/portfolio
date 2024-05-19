@@ -83,8 +83,8 @@ const Projects = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("projects")}
       >
         {/* ------------------------------------------------------------TITLE */}
-        <p className="font-title mb-2 font-black sm:text-5xl text-4xl">
-          PRO<span className="text-primary-light-3">JECTS</span>
+        <p className="font-title mb-2 font-black sm:text-5xl text-4xl uppercase">
+          pro<span className="text-primary-light-3">jects</span>
         </p>
         <div className="flex justify-center mt-5">
           <LineGradient3 width="w-1/3" />

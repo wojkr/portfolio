@@ -40,11 +40,11 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="md:text-[6dvw] text-[10dvw] leading-none font-title text-center md:text-end ">
+          <p className="md:text-[6dvw] text-[10dvw] leading-none font-title text-center md:text-end uppercase">
             <span className="md:drop-shadow-none drop-shadow-border-1px">
-              WOJCIECH <br></br>
+              wojciech <br></br>
             </span>
-            <span className="md:text-[9.15dvw] text-[15.25dvw]">KRUPA</span>
+            <span className="md:text-[9.15dvw] text-[15.25dvw]">krupa</span>
           </p>
           <motion.div
             className="flex justify-center md:justify-end"

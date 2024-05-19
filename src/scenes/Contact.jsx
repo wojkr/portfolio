@@ -79,8 +79,8 @@ const Contact = ({ setSelectedPage }) => {
         onViewportEnter={() => setSelectedPage("contact")}
       >
         <div>
-          <p className="font-title font-semibold text-4xl md:text-end text-center">
-            CONTACT <span className="text-primary-1 ">ME</span>
+          <p className="font-title font-semibold text-4xl md:text-end text-center uppercase">
+            contact <span className="text-primary-1 ">me</span>
           </p>
           <div className="flex justify-center md:justify-end my-5">
             <LineGradientPrimary1 width="w-1/2" />
@@ -191,17 +191,17 @@ const Contact = ({ setSelectedPage }) => {
             <div className="md:text-start text-center">
               {!isSubmited ? (
                 <button
-                  className="p-5 bg-primary-1 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500"
+                  className="p-5 bg-primary-1 font-normal  text-dark-1 hover:bg-primary-2 hover:text-white transition duration-500 uppercase"
                   type="submit"
                 >
-                  SEND ME A MESSAGE
+                  send me a message
                 </button>
               ) : (
                 <button
-                  className="p-5 bg-primary-light-3 font-normal  text-dark-1"
+                  className="p-5 bg-primary-light-3 font-normal  text-dark-1 uppercase"
                   disabled
                 >
-                  SENDING...
+                  sending...
                 </button>
               )}
               {mailSentConfirmation && (

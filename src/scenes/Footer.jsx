@@ -15,7 +15,9 @@ const Footer = ({ setSelectedPage }) => {
             WK
           </AnchorLink>
           <p className="text-md text-dark-1">
-            &copy;2023 WOJCIECH KRUPA. All Rights Reserved.
+            &copy;{new Date(Date.now()).getFullYear()}{" "}
+            <span className="uppercase">wojciech krupa.</span> All Rights
+            Reserved.
           </p>
         </div>
       </div>
