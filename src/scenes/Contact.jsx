@@ -52,7 +52,6 @@ const Contact = ({ setSelectedPage }) => {
       const isValid = await trigger();
       if (isValid) {
         setMailSentConfirmation(mailMessages.await);
-        console.log("Email: Input");
         console.log(e);
         await sendEmail(e);
       } else {

@@ -7,9 +7,6 @@ const Footer = ({ setSelectedPage }) => {
       <div className="w-5/6 mx-auto">
         <SocialMediaIcons color="dark-1" />
         <div className="md:flex justify-center md:justify-between text-center font-semibold ">
-          {/* <a href="#home" className="font-title text-2xl text-dark-1">
-            WK{" "}
-          </a> */}
           <AnchorLink
             className="font-title text-2xl text-dark-1"
             href="#home"
