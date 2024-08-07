@@ -47,7 +47,7 @@ const Link = ({
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isAboveMediumScreens = useMediaQuery("(min-width:768px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-gradient-1";
   const buttonBackground = isTopOfPage ? "bg-primary-1" : "";
 
@@ -69,6 +69,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <div className="flex justify-between gap-16 tracking-wider text-lg ">
             <Link
               page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+              setIsMenuToggled={setIsMenuToggled}
+              isTopOfPage={isTopOfPage}
+            />
+            <Link
+              page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
               setIsMenuToggled={setIsMenuToggled}
@@ -120,6 +127,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-dark-1">
               <Link
                 page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+                setIsMenuToggled={setIsMenuToggled}
+                dark={false}
+              />
+              <Link
+                page="Experience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 setIsMenuToggled={setIsMenuToggled}

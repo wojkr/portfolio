@@ -14,6 +14,14 @@ const DotGroup = ({ setSelectedPage, selectedPage }) => {
       ></AnchorLink>
       <AnchorLink
         className={`${
+          selectedPage === "experience" ? selectedStyles : "bg-primary-1"
+        } w-3 h-3`}
+        href="#experience"
+        onClick={() => setSelectedPage("experience")}
+        aria-label="Navigate to the Experience section"
+      ></AnchorLink>
+      <AnchorLink
+        className={`${
           selectedPage === "skills" ? selectedStyles : "bg-primary-1"
         } w-3 h-3`}
         href="#skills"
