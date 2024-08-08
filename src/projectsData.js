@@ -11,6 +11,16 @@ import Ride350 from "./assets/ride-350.webp";
 
 export const projectsData = [
   {
+    title: "Ride Rite",
+    subtitle: "eCommerce",
+    img550: Ride550,
+    img350: Ride350,
+    desc: "React+MUI, Redux, Strapi CMS, Stripe Payment",
+    link: "https://wojkr.github.io/projects/#5",
+    serverUrl: "https://ride-rite-server.onrender.com/api/items",
+    isTurnOnServerNeeded: true,
+  },
+  {
     title: "Nomad Hive",
     subtitle: "Marketplace App",
     img550: Nomad550,
@@ -26,16 +36,6 @@ export const projectsData = [
     desc: "NodeJS, Express, MongoDB, PassportAuth and more...",
     link: "https://wojkr.github.io/projects/#2",
     serverUrl: "https://sweet-app-try.onrender.com/desserts",
-    isTurnOnServerNeeded: true,
-  },
-  {
-    title: "Ride Rite",
-    subtitle: "eCommerce",
-    img550: Ride550,
-    img350: Ride350,
-    desc: "React+MUI, Redux, Strapi CMS, Stripe Payment",
-    link: "https://wojkr.github.io/projects/#5",
-    serverUrl: "https://ride-rite-server.onrender.com/api/items",
     isTurnOnServerNeeded: true,
   },
   {

@@ -17,6 +17,9 @@ body,
 .bg-pattern-landing {
   background-image: url(assets/pattern-landing.svg);
 }
+.bg-pattern-experience {
+  background-image: url(assets/pattern-experience.svg);
+}
 .bg-pattern-skills {
   background-image: url(assets/pattern-skills.svg);
 }

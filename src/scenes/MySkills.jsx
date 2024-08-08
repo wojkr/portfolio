@@ -40,9 +40,9 @@ const MySkills = ({ setSelectedPage }) => {
       className="gap-16 py-32 min-h-[100dvh] flex flex-col justify-center z-10"
     >
       {/* FIRST ROW */}
-      <div className="md:flex justify-between xl:text-end md:text-start text-center md:items-start gap-20">
+      <div className="md:flex md:flex-row-reverse justify-between md:text-left text-center md:items-start gap-20">
         <motion.div
-          className="lg:w-1/3 md:w-1/2 "
+          className="lg:w-1/3 md:w-1/2 inline-block text-left"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -57,7 +57,7 @@ const MySkills = ({ setSelectedPage }) => {
           <p className="font-title mb-2 font-black text-5xl uppercase">
             my <span className="text-primary-2 ">skills</span>{" "}
           </p>{" "}
-          <div className="flex justify-center md:justify-start xl:justify-end my-5">
+          <div className="flex justify-start my-5">
             <LineGradient width="w-1/4" />
           </div>
           <div className="mt-5 mb-10 text-lg drop-shadow-accent ">
