@@ -6,6 +6,7 @@ import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient2";
 import LineGradientPrimary1 from "./components/LineGradient1";
 import LineGradientPrimary3 from "./components/LineGradient3";
+import Experience from "./scenes/Experience";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
@@ -20,7 +21,9 @@ function App() {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   triggerSpinUp();
-  trafficEmailNotification();
+
+  const url = "https://usebasin.com/f/4d404e5170ee";
+  trafficEmailNotification(url);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +68,12 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </div>
       </div>
+      <LineGradientPrimary3 />
+      <div className="bg-pattern-experience">
+        <div className="w-5/6 mx-auto">
+          <Experience setSelectedPage={setSelectedPage} />
+        </div>
+      </div>
       <LineGradient />
       <div className="bg-pattern-skills">
         <div className="w-5/6 mx-auto">
@@ -80,7 +89,7 @@ function App() {
       <LineGradientPrimary1 />
       <div className="md:min-h-[100dvh] flex flex-col ">
         <div className="w-5/6 mx-auto flex-grow flex flex-col justify-center">
-          <Contact setSelectedPage={setSelectedPage} />
+          <Contact setSelectedPage={setSelectedPage} url={url} />
         </div>
         <Airplane height={"140px"} />
         <Footer setSelectedPage={setSelectedPage} className="z-10 mt-auto" />

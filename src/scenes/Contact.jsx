@@ -7,7 +7,7 @@ import contactImage600 from "../assets/contact-600.webp";
 import contactImage400 from "../assets/contact-400.webp";
 import { useState } from "react";
 
-const Contact = ({ setSelectedPage }) => {
+const Contact = ({ setSelectedPage, url }) => {
   const [isSubmited, setIsSubmited] = useState(false);
   const [mailSentConfirmation, setMailSentConfirmation] = useState(false);
   const {
@@ -24,24 +24,26 @@ const Contact = ({ setSelectedPage }) => {
     await: "Sending...",
   };
   const sendEmail = async (e) => {
-    await fetch("https://usebasin.com/f/4d404e5170ee", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        reset();
-        setMailSentConfirmation(mailMessages.success);
-      })
-      .catch((error) => {
-        setMailSentConfirmation(mailMessages.error);
-        console.log(error);
-      })
-      .finally(() => setIsSubmited(false));
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
+      });
+
+      if (!res.ok) throw new Error(`HTTP status: ${res.status}`);
+
+      reset();
+      setMailSentConfirmation(mailMessages.success);
+    } catch (e) {
+      setMailSentConfirmation(mailMessages.error);
+      console.info("ER--- Email sending error:", e?.message);
+    } finally {
+      setIsSubmited(false);
+    }
   };
 
   const onSubmit = async (e) => {
@@ -52,7 +54,6 @@ const Contact = ({ setSelectedPage }) => {
       const isValid = await trigger();
       if (isValid) {
         setMailSentConfirmation(mailMessages.await);
-        console.log(e);
         await sendEmail(e);
       } else {
         setIsSubmited(false);
@@ -133,6 +134,7 @@ const Contact = ({ setSelectedPage }) => {
               <input
                 className="w-full bg-primary-light-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="NAME"
+                autoComplete="true"
                 type="text"
                 {...register("name", {
                   required: true,
@@ -156,6 +158,7 @@ const Contact = ({ setSelectedPage }) => {
               <input
                 className="w-full bg-primary-light-1 text-dark-1 font-normal placeholder-black placeholder-opacity-40 p-3"
                 placeholder="EMAIL"
+                autoComplete="true"
                 type="text"
                 formNoValidate="formnovalidate"
                 {...register("email", {

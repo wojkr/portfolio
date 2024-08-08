@@ -1,33 +1,24 @@
 import { useLayoutEffect } from "react";
 import { projectsData } from "../projectsData";
 
-const triggerSpinUp = (query) => {
+const triggerSpinUp = () => {
   const runServers = () => {
-    console.log(
-      "----- Requests to trigger the Render.com server spin-up behavior ----- "
+    console.info(
+      "----- Requests to trigger the Render.com server spin-up behavior"
     );
     projectsData.forEach(async (p) => {
       if (p.isTurnOnServerNeeded) {
-        console.log(`      Sending request to ${p.title}`);
+        console.info(`----- ----- (${p.title}): Sending request...`);
         try {
           await fetch(p.serverUrl, {
             headers: {
               "Content-Type": "application/json",
-              Accept: "application/json",
             },
-          })
-            .then((responseJSON) => responseJSON.json())
-            .then((response) => {
-              console.log(`      RESOLVED for ${p.title}:`);
-              console.log(response);
-            })
-            .catch((e) => {
-              console.log(`      RESOLVED for ${p.title}:`);
-              console.warn(`     Error: ${e.message}`);
-            });
+            mode: "no-cors",
+          });
+          console.info(`OK--- ----- (${p.title}): Request sent`);
         } catch (e) {
-          console.warn(`      Caught error (${p.title}):`);
-          console.warn(e);
+          console.info(`ER--- ----- (${p.title}): Caught error: ${e?.message}`);
         }
       }
     });
