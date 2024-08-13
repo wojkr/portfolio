@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 
 const now = new Date(Date.now());
 const MailData = {
+  email: "test@test.com",
   platform: navigator?.userAgentData?.platform || "no data",
   isMoblie: navigator?.userAgentData?.mobile ? "Mobile" : "Desktop",
   date: now.toDateString(),
